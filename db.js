@@ -4,7 +4,7 @@ export const videos = [
         title: "Video Aswome",
         description: "Thie is something I love",
         views: 24,
-        videoFile: "https://archive.org/details/BigBuckBunny_124",
+        videoFile: "https://archieve.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
         creator: {
             id: "tesung30",
             name: "hongmo",
