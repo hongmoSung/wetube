@@ -14,10 +14,16 @@ export const postJoin = (req, res) => {
     } else {
         // to Do: Register User
         // to Do: Log user in
-        res.render(routes.home);
+        res.redirect(routes.home);
     }
 };
-export const login = (req, res) => res.render("login", { pageTitle: "Log In" });
+
+export const getLogin = (req, res) => res.render("login", { pageTitle: "Log In" });
+export const postLogin = (req, res) => {
+    res.redirect(routes.home);
+}
+
+
 export const logout = (req, res) => res.render("logout", { pageTitle: "Log Out" });
 export const userDetail = (req, res) => res.render("userDetail", { pageTitle: "User Detailt" });
 export const editDetail = (req, res) => res.render("editDetail", { pageTitle: "Edit Detailt" });
