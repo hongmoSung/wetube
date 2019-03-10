@@ -79,5 +79,5 @@ typings/
 # DynamoDB Local files
 .dynamodb/
 node_modules
-
+package-lock.json
 uploads
