@@ -1,11 +1,16 @@
-import express from 'express';
-import routes from "../routes"
-import { userDetail, editProfile, changePassword } from '../controller/userController';
+import express from "express";
+import routes from "../routes";
+import {
+  userDetail,
+  editProfile,
+  changePassword
+} from "../controller/userController";
+import { onlyPrivate } from "../middlewares";
 
 const userRouter = express.Router();
 
-userRouter.get(routes.editProfile, editProfile);
-userRouter.get(routes.usersDetails, userDetail)
-userRouter.get(routes.changePassword, changePassword)
+userRouter.get(routes.editProfile, onlyPrivate, editProfile);
+userRouter.get(routes.usersDetails, onlyPrivate, userDetail);
+userRouter.get(routes.changePassword, changePassword);
 
 export default userRouter;
