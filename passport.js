@@ -26,9 +26,7 @@ passport.use(
     {
       clientID: process.env.FB_ID,
       clientSecret: process.env.FB_SCRET,
-      callbackURL: `https://wise-cougar-66.localtunnel.me${
-        routes.facebookCallback
-      }`,
+      callbackURL: `http://localhost:4000${routes.facebookCallback}`,
       profileFields: ["id", "displayName", "photos", "email"],
       scope: ["public_profile", "email"]
     },
